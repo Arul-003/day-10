@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JAVASCRIPT</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <h1>Javascript dates</h1>
+    <h2>using new date</h2>
+    <p>define the current date</p>
+    <p id="daw"></p>
+
+    <p id="nede"></p>
+
+    <h2>Javascript Math.PI</h2>
+    <p>Math.PI returns the radio of a circle's to its diameter</p>
+    <p id="mat"></p>
+
+    <h2>Javascript Math Constants</h2>
+    <p id="matco"></p>
+
+    <h1>Javascript Booleans</h1>
+    <p>boolean and boolean object can't be safely compared:</p>
+    <p id="boo"></p>
+
+    <h2>Javascript if else</h2>
+    <p>time based greeting:</p>
+    <p id="fel"></p>
+
+    <h2>Javascript switch</h2>
+    <p id="swi"></p>
+
+    <h2>Javascript Loop</h2>
+    <p id="loo"></p>
+
+    <h1>Javascript loops</h1>
+    <h2>For in loops</h2>
+    <p>for statement can loops over array values:</p>
+    <p id="looin"></p>
+
+    <h2>Javascript for of loop</h2>
+    <p>the for of statement loops through the values of an iterable object.</p>
+    <p id="forlo"></p>
+
+    <h2>Javascript do while Loop</h2>
+    <p id="dow"></p>
+
+    <h1>Javascript iterables</h1>
+    <h2>iterate over a set</h2>
+    <p id="iter"></p>
+
+    <h1>Javascript numbers</h1>
+    <p>number method is to convert a variable into number</p>
+    <p id="varnum"></p>
+
+    <h1>Javascript operators</h1>
+    <p>the typeof operator returns the typeof a variable or an expressions:</p>
+    <p id="tyof"></p>
+
+    <h1>Javascript class method</h1>
+    <p>pass the parameter</p>
+    <p id="clm"></p>
+
+    <h1>Javascript Arithmetic</h1>
+    <h2>Operator Precedence</h2>
+    <p>this operation has compute from left to right</p>
+    <p id="arth"></p>
+
+    <h1>Javascript trycatch error</h1>
+    <p>input the number between 5 and 10:</p>
+    <input type="text" id="demo">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+
+    <h1>JavaScript Functions</h1>
+    <h2>The Arrow Function</h2>
+    
+    <p>This example shows an Arrow Function with a parameter.</p>
+    
+    <p id="func"></p>
+</main>
+<footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Latest News</h3>
+            <ul>
+              <li><a href="#">News Item 1</a></li>
+              <li><a href="#">News Item 2</a></li>
+              <li><a href="#">News Item 3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Contact Us</h3>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +1234567890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  </div>
+    <script>
+        const d = new Date();
+        document.getElementById("daw").innerHTML = d;
+        let text;
+        const today = new Date();
+        const someday = new Date();
+        someday.setFullYear(2100, 0, 14);
+        if (someday > today) {
+            text = "Today is before January 14, 2100.";
+        } else {
+            text = "Today is after January 14, 2100.";
+        } 
+        document.getElementById("nede").innerHTML = text;
+        document.getElementById("mat").innerHTML = Math.PI;
+        document.getElementById("matco").innerHTML = "<p><b>Math.E:</b>" + Math.E + "</p>" +
+        "<p><b>Math.PI:</b>" + Math.PI + "</p>" + "<p><b>Math.SQRT2:</b>" + Math.SQRT2 + "</p>" + 
+        "<p><b>Math.SQRT1_2:</b>" + Math.SQRT1_2 + "</p>" +
+        "<p><b>Math.LN2:</b>" + Math.LN2 + "</p>" + 
+        "<p><b>Math.LN10:</b>" + Math.LN10 + "</p>" + 
+        "<p><b>Math.LOG2E:</b>" + Math.LOG2E + "</p>" + 
+        "<p><b>Math.LOG10E:</b>" + Math.LOG10E + "</p>";
+        let x = false;
+        let y = new Boolean(false);
+        document.getElementById("boo").innerHTML= (x==y);
+        const time = new Date().getHours();
+        let greeting;
+        if (time < 10){
+            greeting = "Good morning";
+        } else if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.getElementById("fel").innerHTML = greeting;
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+        document.getElementById("swi").innerHTML = "Today is " + day;
+        const cars = ["BMW","Volvo","Saab","Ford","Fiat","Audi"];
+        let texts ="";
+        for (let i = 0; i < cars.length; i++) {
+            texts += cars[i] + "<br>";
+        }
+        document.getElementById("loo").innerHTML = texts;
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        for (let x in numbers) {
+            txt += numbers[x] + "<br>";
+        }
+        document.getElementById("looin").innerHTML = txt;
+        let language = "Javascript";
+        let tex = "";
+        for (let x of language) {
+            tex += x + "<br>";
+        }
+        document.getElementById("forlo").innerHTML = tex;
+        let tet = ""
+        let i = 0;
+        do {
+            tet += "<br>The number is " + i;
+            i++;
+        }
+        while (i<8);
+        document.getElementById("dow").innerHTML = tet;
+        const letters = new Set(["a","b","c","d"])
+        let ttx = "";
+        for (const x of letters){
+            ttx += x + "<br>";
+        }
+        document.getElementById("iter").innerHTML = ttx;
+        document.getElementById("varnum").innerHTML = Number("3.14") + "<br>" +
+        Number(Math.PI) + "<br>" + Number("   ") + "<br>" +
+        Number("") + "<br>" + Number("99 88") + "<br>" +
+        Number("John") + "<br>";
+        document.getElementById("tyof").innerHTML = "'John' is " + typeof "John" + "<br><br>" +
+        "('John' + 'Doe') is " + typeof ("John" + "Doe") + "<br><br>" +
+        "3.14 is " + typeof 3.14 + "<br><br>" +
+        "33 is " + typeof (33 + 66) + "<br><br>" +
+        "(33 + 66) is " + typeof 33 + "<br><br>" + "u is " + typeof u;
+        class Car {
+            constructor (name,year) {
+                this.name = name;
+                this.year = year;
+            }
+            age(x){
+                return x - this.year;
+            }
+        }
+        const date = new Date();
+        let year = date.getFullYear();
+        const myCar = new Car("ford",2012);
+        document.getElementById("clm").innerHTML = "My car is " + myCar.age(year) + " years old.";
+        document.getElementById("arth").innerHTML = 100/50*3;
+        function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x.trim() == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5)  throw "too low";
+    if(x > 10)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+let hello = "";
+
+hello = (val) => "Hello " + val;
+
+document.getElementById("func").innerHTML = hello("Universe!");
+    </script>
+</body>
+</html>
